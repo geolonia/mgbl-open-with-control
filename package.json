@@ -1,0 +1,19 @@
+{
+  "name": "@geolonia/mbgl-open-with-control",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mapbox-gl": "^0.54.0",
+    "rimraf": "^2.6.3",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "scripts": {
+    "build": "rimraf ./dist && webpack -p && curl https://github.com/tilecloud/embed/raw/plugin-system/dist/embed.js > ./dist/embed.js && cp ./src/index.html ./dist/index.html"
+  },
+  "dependencies": {}
+}
